@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require ('mongoose')
 const routes = require('./routes')
+const cors = require('cors')
 
 const app = express()
 
@@ -9,6 +10,7 @@ mongoose.connect('mongodb+srv://oministack:oministack@cluster0-avj1e.mongodb.net
   useUnifiedTopology: true
 })
 
+app.use(cors())
 app.use(express.json())
 app.use(routes)
 
