@@ -1,3 +1,4 @@
 module.exports = function parseStringAsArray(arrayAsString) {
-    return arrayAsString.split(',').map(tech => tech.trim());
+    if (arrayAsString !== undefined)
+        return arrayAsString.split(',').map(tech => tech.trim());
 }
